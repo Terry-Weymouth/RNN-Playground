@@ -4,7 +4,7 @@
 	
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.weymouth.deeplerning.playground</groupId>
-	<artifactId>RecurrentDemo</artifactId>
+	<artifactId>ShakspereDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
