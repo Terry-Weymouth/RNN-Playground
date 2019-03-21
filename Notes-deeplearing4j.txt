@@ -1,0 +1,16 @@
+Notes on https://github.com/deeplearning4j/dl4j-examples.git
+
+Problems with examples ---
+* org.datavec.api.util.ClassPathResource - depricated
+  use org.nd4j.linalg.io.ClassPathResource instead
+  -- fairly widespread.
+  See https://github.com/deeplearning4j/nd4j/issues/1764
+
+* org.deeplearning4j.eval.Evaluation - deprecated 
+  Use ND4J Evaluation class, which has the same interface: 
+  org.nd4j.evaluation.classification.Evaluation.Metric
+  See line 29 - https://github.com/deeplearning4j/deeplearning4j/blob/master/...
+  deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval/Evaluation.java
+  Also, very widespread
+
+
