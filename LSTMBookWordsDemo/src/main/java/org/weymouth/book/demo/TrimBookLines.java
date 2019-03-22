@@ -15,12 +15,18 @@ public class TrimBookLines {
 		ClassLoader classLoader = getClass().getClassLoader();
 		File file = new File(classLoader.getResource("HayslopeGrange-EmmaLeslie.txt").getFile());
 		List<String> lines = Files.readAllLines(file.toPath());
-		
-		for (int i = 87; i < 3075; i++) {
+
+		int start = 87;
+		int end = 3075;
+		for (int i = start; i < start+20; i++) {
 			System.out.println(String.format("%5d: %s", i, lines.get(i)));
 		}
 		
-//		for (int i = 0; i < 3075; i++) {
+		for (int i = end-20; i < end; i++) {
+			System.out.println(String.format("%5d: %s", i, lines.get(i)));
+		}
+
+//		for (int i = start; i < end; i++) {
 //			System.out.println(String.format("%5d: %s", i, lines.get(i)));
 //		}
 		
