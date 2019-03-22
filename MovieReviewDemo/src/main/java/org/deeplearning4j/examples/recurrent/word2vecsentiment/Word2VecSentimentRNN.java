@@ -53,7 +53,8 @@ public class Word2VecSentimentRNN {
     public static final String DATA_URL = "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz";
     /** Location to save and extract the training/testing data */
     // public static final String DATA_PATH = FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_w2vSentiment/");
-    public static final String DATA_PATH = "/Users/weymouth/Desktop/Deeplearning4j/DataSources/";
+    // public static final String DATA_PATH = "/Users/weymouth/Desktop/Deeplearning4j/DataSources/";
+    public static final String DATA_PATH = System.getenv("MOVIE_REVIEW_DATA");
     /** Location (local file system) for the Google News vectors. Set this manually. */
     public static final String WORD_VECTORS_PATH = "/Users/weymouth/Desktop/Deeplearning4j/DataSources/GoogleNews-vectors-negative300.bin.gz";
 
@@ -62,6 +63,9 @@ public class Word2VecSentimentRNN {
 //        if(WORD_VECTORS_PATH.startsWith("/PATH/TO/YOUR/VECTORS/")){
 //            throw new RuntimeException("Please set the WORD_VECTORS_PATH before running this example");
 //        }
+    	if(DATA_PATH == null || DATA_PATH.isEmpty()) {
+    		throw new RuntimeException("Please set the env variable MOVIE_REVIEW_DATA before running this example");
+    	}
 
         //Download and extract data
         downloadData();
