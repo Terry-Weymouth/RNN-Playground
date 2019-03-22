@@ -1,4 +1,4 @@
-package org.weymouth.book.demo;
+package org.weymouth.book.exploration;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +21,8 @@ public class TrimBookLines {
 		for (int i = start; i < start+20; i++) {
 			System.out.println(String.format("%5d: %s", i, lines.get(i)));
 		}
+		
+		System.out.println();
 		
 		for (int i = end-20; i < end; i++) {
 			System.out.println(String.format("%5d: %s", i, lines.get(i)));

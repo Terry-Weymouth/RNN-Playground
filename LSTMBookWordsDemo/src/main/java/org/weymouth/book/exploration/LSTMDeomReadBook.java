@@ -1,4 +1,4 @@
-package org.weymouth.book.demo;
+package org.weymouth.book.exploration;
 
 import java.io.File;
 
